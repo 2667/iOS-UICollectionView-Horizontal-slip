@@ -28,7 +28,7 @@
 
 #pragma mark -- UICollectionViewDataSource  
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 30;
+    return 12;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
@@ -45,7 +45,9 @@
 
 #pragma mark --UICollectionViewDelegateFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(SCRW,SCRH);
+//    return CGSizeMake(SCRW/3,SCRH);
+    return CGSizeMake(SCRW/3,200);
+    
 }
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section{
     return 0;
@@ -68,7 +70,11 @@
 }
 
 
-
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    
+    
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
